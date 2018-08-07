@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6ae32ad9-ffcf-4cb9-b863-8276c6600204" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/dist/Quotogram/3rdpartylicenses.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/dist/Quotogram/assets/bg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/dist/Quotogram/assets/bg2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/dist/Quotogram/assets/bg3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/dist/Quotogram/assets/bg4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/dist/Quotogram/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/dist/Quotogram/fontawesome-webfont.674f50d287a8c48dc19b.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/dist/Quotogram/fontawesome-webfont.912ec66d7572ff821749.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/dist/Quotogram/fontawesome-webfont.af7ae505a9eed503f8b8.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/dist/Quotogram/fontawesome-webfont.b06871f281fee6b241d6.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/dist/Quotogram/fontawesome-webfont.fee66e712a8a08eef580.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/dist/Quotogram/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/dist/Quotogram/main.2bd9a73ae65e2b8b1239.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/dist/Quotogram/polyfills.a8e1fcb1caf2b6c7cdae.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/dist/Quotogram/runtime.a66f828dca56eeb90e02.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/dist/Quotogram/styles.ec54c2891bb9a46ff3d9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/e2e/tsconfig.e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/date-count.pipe.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/date-count.pipe.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/quote-content/quote-content.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/quote-content/quote-content.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/quote-content/quote-content.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/quote-content/quote-content.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/quote-form/quote-form.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/quote-form/quote-form.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/quote-form/quote-form.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/quote-form/quote-form.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/quote.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/quote/quote.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/quote/quote.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/quote/quote.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/app/quote/quote.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/assets/bg.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/assets/bg2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/assets/bg3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/assets/bg4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/src/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Quotogram/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/e2e/tsconfig.e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/app-routing.module.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/app-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/navbar/navbar.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/navbar/navbar.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/navbar/navbar.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/navbar/navbar.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/repos.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/repos/repos.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/repos/repos.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/repos/repos.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/repos/repos.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/user.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/users/users.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/users/users.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/users/users.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/app/users/users.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/src/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../github-search/tslint.json" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="193637729">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.22" value="2" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.51" value="1" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="41" />
+          <entry key="py" value="54" />
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="41" />
+          <entry key="Hoi4 file" value="1" />
+          <entry key="Python" value="54" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="431" />
+          <entry key="py" value="1185" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="431" />
+          <entry key="Python" value="1185" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/board/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/authentication/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/board/templates/userprofile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/board/templates/new_service.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="25" selection-start-column="25" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/codeboard/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="975">
+              <caret line="65" column="70" selection-start-line="65" selection-start-column="70" selection-end-line="65" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/codeboard/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/board/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/board/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>data</find>
+      <find>boots</find>
+      <find>load bootstrap4</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/authentication/templates/registration/base.html" />
+        <option value="$PROJECT_DIR$/authentication/templates/registration/student_signup.html" />
+        <option value="$PROJECT_DIR$/authentication/templates/registration/teacher_signup.html" />
+        <option value="$PROJECT_DIR$/authentication/models.py" />
+        <option value="$PROJECT_DIR$/authentication/views.py" />
+        <option value="$PROJECT_DIR$/authentication/forms.py" />
+        <option value="$PROJECT_DIR$/authentication/templates/profile/base.html" />
+        <option value="$PROJECT_DIR$/authentication/templates/profile/student_profile.html" />
+        <option value="$PROJECT_DIR$/authentication/templates/profile/teacher_profile.html" />
+        <option value="$PROJECT_DIR$/authentication/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/authentication/urls.py" />
+        <option value="$PROJECT_DIR$/board/templates/navbar.html" />
+        <option value="$PROJECT_DIR$/board/templates/index_navbar.html" />
+        <option value="$PROJECT_DIR$/board/templates/index.html" />
+        <option value="$PROJECT_DIR$/board/templates/index/index.html" />
+        <option value="$PROJECT_DIR$/board/templates/index/index_base.html" />
+        <option value="$PROJECT_DIR$/board/templates/home.html" />
+        <option value="$PROJECT_DIR$/board/admin.py" />
+        <option value="$PROJECT_DIR$/board/forms.py" />
+        <option value="$PROJECT_DIR$/board/templates/new_service.html" />
+        <option value="$PROJECT_DIR$/board/templates/base.html" />
+        <option value="$PROJECT_DIR$/board/models.py" />
+        <option value="$PROJECT_DIR$/board/urls.py" />
+        <option value="$PROJECT_DIR$/board/views.py" />
+        <option value="$PROJECT_DIR$/board/templates/userprofile.html" />
+        <option value="$PROJECT_DIR$/virtual/lib/python3.6/site-packages/pinax/templates/templates/pinax/messages/message_create.html" />
+        <option value="$PROJECT_DIR$/board/templates/pinax/messages/base.html" />
+        <option value="$PROJECT_DIR$/board/templates/pinax/messages/message_create.html" />
+        <option value="$PROJECT_DIR$/codeboard/settings.py" />
+        <option value="$PROJECT_DIR$/codeboard/urls.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="27" />
+    <option name="width" value="663" />
+    <option name="height" value="741" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="coardboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coardboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coardboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coardboard" type="462c0819:PsiDirectoryNode" />
+              <item name="board" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coardboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coardboard" type="462c0819:PsiDirectoryNode" />
+              <item name="board" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coardboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coardboard" type="462c0819:PsiDirectoryNode" />
+              <item name="codeboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lyft-Clone" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/board/templates/index" />
+      <recent name="$PROJECT_DIR$/authentication/templates/registration" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="coardboard" type="Python.DjangoServer" factoryName="Django server">
+      <module name="coardboard" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6ae32ad9-ffcf-4cb9-b863-8276c6600204" name="Default Changelist" comment="" />
+      <created>1533627755867</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1533627755867</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="25" width="1366" height="743" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23636363" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007576" side_tool="true" weight="0.32952693" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49924242" visible="true" weight="0.32952693" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="R Graphics" order="4" />
+      <window_info anchor="right" id="R Packages" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22121212" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007576" side_tool="true" weight="0.32952693" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49924242" visible="true" weight="0.32952693" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="R Graphics" order="4" />
+      <window_info anchor="right" id="R Packages" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/authentication/templates/registration/teacher_signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/templates/registration/student_signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="18" selection-end-line="26" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/templates/registration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/templates/registration/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/templates/profile/student_profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/templates/profile/teacher_profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/templates/profile/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-end-line="34" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/board/templates/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="17" selection-end-line="31" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/board/templates/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/board/templates/index/index_navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="7" selection-end-line="31" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/board/templates/index/index_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-end-line="36" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/board/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/board/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="15" column="202" selection-start-line="15" selection-start-column="202" selection-end-line="15" selection-end-column="202" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/board/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/board/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="23" />
+          <caret selection-end-line="3" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="52" column="41" lean-forward="true" selection-start-line="43" selection-start-column="2" selection-end-line="52" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/virtual/lib/python3.6/site-packages/django/template/defaulttags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="1041" selection-start-line="1041" selection-end-line="1041" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/board/templates/pinax/messages/base.html" />
+    <entry file="file://$PROJECT_DIR$/virtual/lib/python3.6/site-packages/pinax/templates/templates/pinax/messages/message_create.html" />
+    <entry file="file://$PROJECT_DIR$/board/templates/pinax/messages/message_create.html" />
+    <entry file="file://$PROJECT_DIR$/board/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/board/templates/userprofile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/board/templates/new_service.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" selection-start-column="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeboard/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="70" selection-start-line="65" selection-start-column="70" selection-end-line="65" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/board/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/board/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/codeboard/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
