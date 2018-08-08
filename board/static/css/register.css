@@ -1,0 +1,54 @@
+.register{
+    /*filter: brightness(98%);*/
+    background-image: url("/static/images/banner.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    text-align: center;
+    color: white;
+}
+
+.registration-form{
+    /*background-color: rgba(0, 0, 0, 0.5) !important;*/
+    background-color: rgba(255,255,255);
+    padding-top: 6%
+
+}
+
+.form-text{
+    display: none;
+}
+
+.push{
+    padding-top: 5%
+}
+
+.register label{
+    display: none;
+}
+
+.register input{
+    background-color: rgba(255,255,255,0.0)!important;
+}
+
+.login-redirect{
+    color: black;
+    padding-bottom: 5%;
+}
+
+.login-redirect a{
+    color: black;
+}
+
+.register .card{
+    border: none;
+}
+
+
+.register-welcome{
+    font-family: 'Annie Use Your Telescope', cursive;
+}
+
+.elongate{
+    min-height: 60vh;
+}

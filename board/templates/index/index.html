@@ -1,7 +1,68 @@
 {% extends 'index/index_base.html' %}
+{% load staticfiles %}
 
 
 {% block content %}
+    <div class="land">
+        <img src="{% static 'images/testbackground.jpg' %}" alt="" class="img-fluid land-img">
+        <div class="land-text-top">
+            <h1 class="land-title"> < CodeBoard /> </h1>
+        </div>
+        <div class="land-text-centered">
+            <h1 class="tagline" id="tagline"></h1>
+        </div>
+        <div class="land-sign-up-buttons ui huge buttons">
+            <a href="/accounts/login/"><button class="positive ui button ">Login</button></a>
+            <div class="or"></div>
+            <button class="negative ui button" data-toggle="modal" data-target="#exampleModalCenter">Register</button>
+        </div>
 
 
+        {#        modal starts here #}
+
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="ui large buttons modal-buttons">
+                            <a href="{% url 'signup-teacher' %}"><button class="ui button">REGISTER AS TEACHER</button></a>
+                            <div class="or"></div>
+                            <a href="{% url 'signup-student' %}"><button class="ui button">REGISTER AS STUDENT</button></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {#    modal ending #}
+
+    </div>
+
+
+
+
+
+    <script>
+        window.onload = function() {
+            typeWriter();
+        };
+
+        var i = 0;
+        var txt = 'EVERYONE A LEARNER EVERYDAY';
+        var speed = 150;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("tagline").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    </script>
 {% endblock %}
+

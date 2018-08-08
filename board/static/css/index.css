@@ -1,0 +1,57 @@
+.land{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.land-img{
+    min-width: 100vw !important;
+    max-width: 100vw;
+    min-height: 100vh; ;
+    max-height: 100vh;
+    filter: brightness(60%);
+}
+
+.land-text-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.land-text-top {
+    position: absolute;
+    top:10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.land-sign-up-buttons{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: brightness(90%) !important;
+}
+
+.land-title{
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 15vh;
+}
+
+.tagline{
+    font-family: 'Lato', sans-serif;
+    font-size: 7vh;
+    color: #f7f7f7;
+}
+
+.modal{
+    filter: brightness(92%)!important;
+}
+.modal-content{
+    height: 30vh;
+}
+
+.modal-buttons{
+    position: relative;
+    padding-top:5%;
+}
