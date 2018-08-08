@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 from django import forms
 
-from board.models import Service, Topic, Comments
+from board.models import Service, Topic, Comments, Ratings
 from authentication.models import Messages
 
 User = get_user_model()
@@ -29,3 +29,9 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comments
         exclude = ['commenter','topic_id']
+
+
+class RateForm(forms.ModelForm):
+    class Meta:
+        model = Ratings
+        exclude = ['rated']

@@ -8,10 +8,23 @@
         {{ profile.bio }}
         {{ profile.github_username }}
     {% endif %}
+    {#{% for ra in rate %}#}
+    {#    {{ ra.s }}#}
+    {#    {% endfor %}#}
+    {{ rate }}
     <form method="post">
         {% csrf_token %}
         {% bootstrap_form dm %}
         <button type="submit" >slide</button>
     </form>
+
+
+    {% if online.id != profile.user.id %}
+        <form method="post" action="{% url 'rate' user_id=profile.user.id  %}">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <input type="submit" value="Rate" class="btn btn-primary">
+        </form>
+    {% endif %}
 {% endblock %}
 
