@@ -1,8 +1,9 @@
+from django.db.models import Sum
 from django.shortcuts import render, redirect, get_object_or_404
-from board.forms import NewServiceForm, TopicForm, CommentForm, Dmform
+from board.forms import NewServiceForm, TopicForm, CommentForm, Dmform, RateForm
 from django.contrib.auth import get_user_model
 from authentication.models import TeacherProfile, StudentProfile
-from board.models import Topic, Comments
+from board.models import Topic, Comments, Ratings
 
 User = get_user_model()
 
@@ -13,9 +14,9 @@ def index(request):
 
 def home(request):
     messages = request.user.outbox.all()
-    inbox = request.user.inbox.filter(read = False)
+    inbox = request.user.inbox.filter(read=False)
     # notifications = len(request.user.inbox.filter(read=False))
-    return render(request, "home.html",locals())
+    return render(request, "home.html", locals())
 
 
 def read(request, msg_id):
@@ -38,13 +39,19 @@ def new_service(request):
 
 
 def userprofile(request, user_id):
-    dmform= Dmform()
+    dmform = Dmform()
+    form = RateForm()
     users = User.objects.get(id=user_id)
-    if request.method=='POST':
+    ratesum = Ratings.objects.filter(rated=users).aggregate(Sum('rate'))
+    count = Ratings.objects.filter(rated=users).count()
+    if count == 0 :
+        rate = 0
+    else:
+        rate = ratesum['rate__sum']/count
+    if request.method == 'POST':
         dmform = Dmform(request.POST)
         if dmform.is_valid():
-            # ['sender', 'reciever', 'time_sent', 'read']
-            dm=dmform.save(commit=False)
+            dm = dmform.save(commit=False)
             dm.sender = request.user
             dm.reciever = users
             dm.save()
@@ -52,7 +59,7 @@ def userprofile(request, user_id):
         profile = TeacherProfile.objects.get(user=users)
     elif users.is_student:
         profile = StudentProfile.objects.get(user=users)
-    return render(request, 'userprofile.html', {"user": users, "profile": profile, "dm":dmform})
+    return render(request, 'userprofile.html', {"user": users, "profile": profile, "dm": dmform, "form": form, "rate":rate, "online":request.user})
 
 
 def forum(request):
@@ -69,7 +76,8 @@ def forum(request):
             return redirect('/forum')
     else:
         form = TopicForm()
-    return render(request, "forum.html", {"form": form, "topics": topics,'comment': comment_form , "comments":comments})
+    return render(request, "forum.html",
+                  {"form": form, "topics": topics, 'comment': comment_form, "comments": comments})
 
 
 def comment(request, topic_id):
@@ -85,3 +93,19 @@ def comment(request, topic_id):
     else:
         comment_form = CommentForm()
     return render(request, 'forum.html', {'comment': comment_form})
+
+
+def rate(request, user_id):
+    form = RateForm()
+    users = User.objects.get(id=user_id)
+    if request.method == 'POST':
+        form = RateForm(request.POST, request.FILES)
+        if form.is_valid():
+            rate = form.save(commit=False)
+            rate.rated = users
+            rate.save()
+            return redirect('/userprofile/'+user_id)
+    else:
+        form = RateForm()
+    return redirect('/userprofile/' + user_id)
+

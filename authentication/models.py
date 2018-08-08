@@ -12,7 +12,6 @@ class User(AbstractUser):
     is_student = models.BooleanField(default=False)
 
 
-
 class Messages(models.Model):
     content = models.TextField()
     sender = models.ForeignKey(User, related_name='outbox')

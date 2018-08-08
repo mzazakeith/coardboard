@@ -9,6 +9,14 @@ Type_Choices = (
     ('One-on-One', 'one-on-one'),
     ('E-lessons', 'online'),
 )
+Rating_Choices = (
+    (1,'⭐'),
+    (2,'⭐⭐'),
+    (3,'⭐⭐⭐'),
+    (4,'⭐⭐⭐⭐'),
+    (5,'⭐⭐⭐⭐⭐')
+
+)
 
 
 class Service(models.Model):
@@ -34,3 +42,6 @@ class Comments(models.Model):
         return self.comment
 
 
+class Ratings(models.Model):
+    rate = models.IntegerField(choices=Rating_Choices, default='None')
+    rated = models.ForeignKey(User)
