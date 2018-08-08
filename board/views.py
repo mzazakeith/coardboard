@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect
-from board.forms import NewServiceForm
+from django.shortcuts import render, redirect, get_object_or_404
+from board.forms import NewServiceForm, TopicForm, CommentForm, Dmform
 from django.contrib.auth import get_user_model
 from authentication.models import TeacherProfile, StudentProfile
+from board.models import Topic, Comments
 
 User = get_user_model()
 
@@ -11,7 +12,15 @@ def index(request):
 
 
 def home(request):
-    return render(request, "home.html")
+    messages = request.user.outbox.all()
+    inbox = request.user.inbox.filter(read = False)
+    # notifications = len(request.user.inbox.filter(read=False))
+    return render(request, "home.html",locals())
+
+
+def read(request, msg_id):
+    request.user.inbox.filter(pk=msg_id, read=False).update(read=True)
+    return redirect('home')
 
 
 def new_service(request):
@@ -29,9 +38,50 @@ def new_service(request):
 
 
 def userprofile(request, user_id):
+    dmform= Dmform()
     users = User.objects.get(id=user_id)
+    if request.method=='POST':
+        dmform = Dmform(request.POST)
+        if dmform.is_valid():
+            # ['sender', 'reciever', 'time_sent', 'read']
+            dm=dmform.save(commit=False)
+            dm.sender = request.user
+            dm.reciever = users
+            dm.save()
     if users.is_teacher:
         profile = TeacherProfile.objects.get(user=users)
     elif users.is_student:
         profile = StudentProfile.objects.get(user=users)
-    return render(request, 'userprofile.html', {"user": users, "profile": profile})
+    return render(request, 'userprofile.html', {"user": users, "profile": profile, "dm":dmform})
+
+
+def forum(request):
+    comments = Comments.objects.all()
+    comment_form = CommentForm()
+    current_user = request.user
+    topics = Topic.objects.all()
+    if request.method == 'POST':
+        form = TopicForm(request.POST, request.FILES)
+        if form.is_valid():
+            topic = form.save(commit=False)
+            topic.user = current_user
+            topic.save()
+            return redirect('/forum')
+    else:
+        form = TopicForm()
+    return render(request, "forum.html", {"form": form, "topics": topics,'comment': comment_form , "comments":comments})
+
+
+def comment(request, topic_id):
+    if request.method == 'POST':
+        topic = get_object_or_404(Topic, pk=topic_id)
+        comment_form = CommentForm(request.POST, request.FILES)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.commenter = request.user
+            comment.topic_id = topic
+            comment.save()
+            return redirect(forum)
+    else:
+        comment_form = CommentForm()
+    return render(request, 'forum.html', {'comment': comment_form})

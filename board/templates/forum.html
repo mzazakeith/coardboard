@@ -1,0 +1,50 @@
+{% extends 'index/index_base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+    <div class="col-md-4">
+        <form method="post">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+        </form>
+    </div>
+    {% for topic in topics %}
+
+        <p data-toggle="modal" data-target="#{{topic.id}}">{{ topic.Title }}</p>
+    {% endfor %}
+
+
+    {% for topic in topics %}
+        <div class="modal fade" id="{{topic.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle"> {{image.image_name}}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>{{ topic.Title }}</h3>
+                        <form  action="{%url 'comment' topic_id=topic.id %}" method="post" enctype="multipart/form-data">
+                            {%csrf_token%}
+                            {% bootstrap_form comment%}
+                        </form>
+                        {% for comment in comments %}
+                            {% if comment.topic_id_id == topic.id %}
+                                <p><strong><a href="{% url 'profile' user_id=comment.commenter.id %}" class="link">{{ comment.commenter }}</a></strong> &nbsp; {{ comment.comment }}</p>
+                            {% endif %}
+                        {% endfor %}
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+
+
+{% endblock %}
