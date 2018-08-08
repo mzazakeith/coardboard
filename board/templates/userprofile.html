@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 {% block content %}
-    {% load inbox %}
-
-{% inbox_count %}
-
+    <h5>{{ profile.user.username }}</h5>
     <p>{{ profile.gender }}</p>
     <p>{{ profile.phone_number }}</p>
     {% if user.is_teacher %}
         {{ profile.bio }}
         {{ profile.github_username }}
     {% endif %}
-
+    <form method="post">
+        {% csrf_token %}
+        {% bootstrap_form dm %}
+        <button type="submit" >slide</button>
+    </form>
 {% endblock %}
 

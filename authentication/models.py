@@ -12,6 +12,15 @@ class User(AbstractUser):
     is_student = models.BooleanField(default=False)
 
 
+
+class Messages(models.Model):
+    content = models.TextField()
+    sender = models.ForeignKey(User, related_name='outbox')
+    reciever = models.ForeignKey(User, related_name='inbox')
+    read = models.BooleanField(default=False)
+    time_sent = models.DateTimeField(auto_now_add=True)
+
+
 class TeacherProfile(models.Model):
     # profile_pic = ImageField()
     bio = models.TextField()
