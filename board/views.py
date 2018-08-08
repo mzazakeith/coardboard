@@ -15,7 +15,6 @@ def index(request):
 def home(request):
     messages = request.user.outbox.all()
     inbox = request.user.inbox.filter(read=False)
-    # notifications = len(request.user.inbox.filter(read=False))
     return render(request, "home.html", locals())
 
 

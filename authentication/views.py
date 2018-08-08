@@ -69,16 +69,3 @@ def create_student_profile(request):
     return render(request, 'profile/student_profile.html', {"form": form, "user": current_user})
 
 
-# @login_required
-# def dmperson(request):
-#     current_user = request.user
-#     if request.method == 'POST':
-#         form = CreateStudentProfileForm(request.POST)
-#         if form.is_valid():
-#             profile = form.save(commit=False)
-#             profile.user = current_user
-#             profile.save()
-#             return redirect('/')
-#     else:
-#         form = CreateStudentProfileForm()
-#     return render(request, 'profile/student_profile.html', {"form": form, "user": current_user})
