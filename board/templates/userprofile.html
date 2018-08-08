@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
-
+{% load bootstrap4 %}
 {% block content %}
-{{ profile.gender }}
+    {% load inbox %}
+
+{% inbox_count %}
+
+    <p>{{ profile.gender }}</p>
+    <p>{{ profile.phone_number }}</p>
+    {% if user.is_teacher %}
+        {{ profile.bio }}
+        {{ profile.github_username }}
+    {% endif %}
 
 {% endblock %}
+

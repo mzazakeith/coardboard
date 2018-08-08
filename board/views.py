@@ -35,3 +35,6 @@ def userprofile(request, user_id):
     elif users.is_student:
         profile = StudentProfile.objects.get(user=users)
     return render(request, 'userprofile.html', {"user": users, "profile": profile})
+
+
+

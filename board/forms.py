@@ -10,3 +10,4 @@ class NewServiceForm(forms.ModelForm):
     class Meta:
         model = Service
         exclude = ['user']
+
