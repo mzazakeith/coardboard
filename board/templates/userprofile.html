@@ -8,9 +8,7 @@
         {{ profile.bio }}
         {{ profile.github_username }}
     {% endif %}
-    {#{% for ra in rate %}#}
-    {#    {{ ra.s }}#}
-    {#    {% endfor %}#}
+
     {{ rate }}
     <form method="post">
         {% csrf_token %}

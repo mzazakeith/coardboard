@@ -1,0 +1,31 @@
+.login .card{
+    /*min-height: 100vh;*/
+    top: 25%;
+    border: none;
+}
+
+input{
+    border-top: none!important;
+    border-left:  none!important;
+    border-right: none!important;
+}
+
+.login-form label{
+    text-transform: uppercase;
+    color: #373737;
+    font-weight: bold;
+}
+
+.login-text{
+    color:#373737;
+
+}
+
+.login-left{
+    background-image: url("/static/images/login.jpg");
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(60%);
+
+}

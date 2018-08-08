@@ -2,43 +2,41 @@
 {% load bootstrap4 %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
 
-            </div>
-            <div class="col-md-4">
-                <div class="card card-default">
+        <div class="container-fluid login-form">
+            <div class="row">
+                <div class="col-md-7 login-left">
 
-                    <div class="card-heading">
-                        <h3 class="text-center">Sign In</h3>
-                    </div>
-                    <div class="card-body">
+                </div>
 
-                        <form  action="/accounts/login/" method="post">
-                            {% csrf_token %}
-                            {% bootstrap_form form%}
+                <div class="col-md-5 login">
 
-                            <div class="form-group">
-                                <input type="submit" class="btn btn-primary btn-lg" value="Login">
-                            </div>
+                    <div class="card card-default">
 
-                            <input type="hidden" name="next" value="{{ next }}">
+                        <div class="card-heading">
+                            <h1 class="text-left login-text"><strong> &nbsp; Sign In</strong></h1>
+                        </div>
+                        <div class="card-body">
 
-                        </form>
+                            <form  action="/accounts/login/" method="post">
+                                {% csrf_token %}
+                                {% bootstrap_form form%}
+
+                                <div class="form-group">
+                                    <input type="submit" class="ui button" value="Login">
+                                </div>
+
+                                <input type="hidden" name="next" value="{{ next }}">
+
+                            </form>
+
+                        </div>
 
                     </div>
 
                 </div>
-
-            </div>
-            <!-- empty div -->
-            <div class="col-md-4">
-
             </div>
         </div>
-    </div>
-
 
 
 {% endblock %}

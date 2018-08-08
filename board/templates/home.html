@@ -2,18 +2,15 @@
 
 
 {% block content %}
-{#{% for dm in messages %}#}
+{##}
+{#    <h2>{{inbox|length}} new Messages</h2>#}
+{#{% for dm in inbox %}#}
 {#<div>#}
+{#    <a href="{% url 'read' msg_id=dm.id %}">Read</a>#}
 {#    <strong>{{ dm.sender.username }}</strong>#}
 {#    <span>{{ dm.content }}</span>#}
 {#</div>#}
 {#{% endfor %}#}
-    <h2>{{inbox|length}} new Messages</h2>
-{% for dm in inbox %}
-<div>
-    <a href="{% url 'read' msg_id=dm.id %}">Read</a>
-    <strong>{{ dm.sender.username }}</strong>
-    <span>{{ dm.content }}</span>
-</div>
-{% endfor %}
+
+
 {% endblock %}

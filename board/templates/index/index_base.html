@@ -14,15 +14,19 @@
 
     {% block styles %}
         {% bootstrap_css %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"/>
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope|Lato" rel="stylesheet">
     {% endblock %}
 
 </head>
 
 <body>
 
-{% include 'index/index_navbar.html' %}
+
 
 {% block content %}
+
 
 {%endblock%}
 
@@ -30,6 +34,8 @@
 {% block scripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     {% bootstrap_javascript %}
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
 {% endblock %}
 
 </body>
