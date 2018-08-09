@@ -13,19 +13,16 @@
 
     {% block styles %}
         {% bootstrap_css %}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"/>
-
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-        <link rel="stylesheet" href="{% static 'css/new_service.css' %}">
-        <link rel="stylesheet" href="{% static 'css/forum.css' %}">
-        <link rel="stylesheet" href="{% static 'css/userprofile.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"/>
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
     {% endblock %}
 
 </head>
 
 <body>
 
-{% include 'navbar.html' %}
 
 {% block content %}
 

@@ -1,16 +1,193 @@
-{% extends 'base.html' %}
+{% extends 'home_base.html' %}
 
 
 {% block content %}
-{##}
-{#    <h2>{{inbox|length}} new Messages</h2>#}
-{#{% for dm in inbox %}#}
-{#<div>#}
-{#    <a href="{% url 'read' msg_id=dm.id %}">Read</a>#}
-{#    <strong>{{ dm.sender.username }}</strong>#}
-{#    <span>{{ dm.content }}</span>#}
-{#</div>#}
-{#{% endfor %}#}
+    <div class="container-fluid">
+        <div class="row home-row">
+            <div class="col-md-1 left-side">
 
+            </div>
+            <div class="col-md-11">
+                <div class="ui transparent input fluid search-bar">
+                    <input class="search-input" type="text" placeholder="Search...">
+                </div>
+                <div class="row home-header">
+                    <div class="overlay ">
+                        <h1 class="home-welcome">Welcome <span class="home-username" >{{ profile.user.username }}</span></h1>
+                    </div>
+                </div>
+                <div class="row home-content">
+
+                    <div class="col-md-3">
+                        {% if user.is_teacher %}
+                            <a href="{% url 'new-service' %}">
+                        {% endif %}
+                        {% if user.is_student %}
+                            <a href="/all-services/">
+                        {% endif %}
+                        <div class="card card-default boards">
+                            <div class="row board-row">
+                                <div class="col-md-7 board-column">
+                                    <div class="file-icon-holder">
+                                        <i class="far fa-file-alt" style="font-size:5vh;color:white;padding-top:25%;"></i>
+                                    </div>
+                                </div>
+                                <div class="col-m-5">
+                                    <br>
+                                    {% if user.is_teacher %}
+                                        <span class="board-text">New Service</span>
+                                    {% endif %}
+                                    {% if user.is_student %}
+                                        <span class="board-text">View Services</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+
+                    <div class="col-md-3">
+                        <a href="{% url 'forum' %}">
+                            <div class="card card-default boards">
+                                <div class="row board-row">
+                                    <div class="col-md-7 board-column">
+                                        <div class="forum-icon-holder">
+                                            <i class="fab fa-wpforms" style="font-size:5vh;color:white;padding-top:25%;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-m-5">
+                                        <br>
+                                        <span class="board-text">Forum</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+                    <div class="col-md-3">
+                        <a href="#">
+                            <div class="card card-default boards" data-toggle="modal" data-target="#exampleModalLong">
+                                <div class="row board-row">
+                                    <div class="col-md-7 board-column">
+                                        <div class="envelope-icon-holder">
+                                            <i class="fas fa-envelope" style="font-size:5vh;color:white;padding-top:25%;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-m-5">
+                                        <br>
+                                        <span class="board-text">Messages <span class="text-muted">{{inbox|length}}</span></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+                    <div class="col-md-3">
+                        <a href="{% url 'profile' user_id=user.id %}">
+                            <div class="card card-default boards">
+                                <div class="row board-row">
+                                    <div class="col-md-7 board-column">
+                                        <div class="profile-icon-holder">
+                                            <i class="far fa-user" style="font-size:5vh;color:white;padding-top:25%;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-m-5">
+                                        <br>
+                                        <span class="board-text">My Profile</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+                    <div class="row col-md-12">
+                        <div class="col-md-6">
+                            <a href="#">
+                                <div class="card card-default boards">
+                                    <div class="row boards-row">
+                                        <div class="col-md-7 board-column">
+                                            <div class="question-icon-holder">
+                                                <i class="far fa-question-circle" style="font-size:5vh;color:white;padding-top:25%;"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-m-5">
+                                            <br>
+                                            <span class="board-text">LEARN MORE ABOUT US</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="/logout/">
+                                <div class="card card-default boards">
+                                    <div class="row">
+                                        <div class="col-m-7 boards-column">
+                                            <br>
+                                            <span class="">DONE FOR TODAY ?</span>
+
+                                        </div>
+                                        <div class="col-md-5 boards-column-right">
+                                            <div class="logout-icon-holder">
+                                                <i class="fas fa-sign-out-alt" style="font-size:5vh;color:white;padding-top:25%;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    {% for dm in inbox %}
+                        <div>
+                            <strong class="sender">{{ dm.sender.username }} :</strong>
+                            <span>{{ dm.content }}</span>
+                            <a href="{% url 'read' msg_id=dm.id %}">Mark as read</a>
+                        </div>
+                    {% empty %}
+                        <p class="text-muted">You have no new messages</p>
+                    {% endfor %}
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
+
+
+

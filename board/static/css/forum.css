@@ -1,0 +1,13 @@
+.question-board{
+    padding-top: 5%;
+    font-size: 7vh;
+    /*back*/
+}
+
+.title-topic{
+    text-transform: uppercase;
+}
+.forum{
+    background-color: #f6faf6;
+    min-height: 90vh;
+}
