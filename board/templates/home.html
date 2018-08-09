@@ -171,7 +171,7 @@
                 <div class="modal-body">
                     {% for dm in inbox %}
                         <div>
-                            <strong class="sender">{{ dm.sender.username }} :</strong>
+                            <strong class="sender"><a href="{% url 'profile' user_id=dm.sender.id %}" >{{ dm.sender.username }}</a> :</strong>
                             <span>{{ dm.content }}</span>
                             <a href="{% url 'read' msg_id=dm.id %}">Mark as read</a>
                         </div>

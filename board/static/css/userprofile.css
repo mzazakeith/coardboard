@@ -69,7 +69,7 @@
     text-shadow: 0 0 4px #ea4c89;
 }
 .another-holder{
-    margin-left: 150px;
+    margin-left: 160px;
 }
 
 
@@ -100,4 +100,13 @@
 .usersprofile{
     background-image: linear-gradient(to bottom, #f6faf6, #ecf9f2, #dff8f3, #d2f7f7, #c7f5ff);
     min-height: 90.2vh;
+}
+
+.services{
+    padding-top:5%;
+}
+
+.all-services{
+    min-height: 90vh;
+    background-color:#f6faf6;
 }

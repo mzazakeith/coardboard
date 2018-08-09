@@ -30,9 +30,15 @@
                 <div class="popic-holder">
                     <img src="{% static 'images/banner.jpg' %}" alt="">
                     {#                    {{ profile.profile_pic.cdn_url }}#}
-                    <h5 class="owner">{{ profile.user.username }} </h5>
+                    <h5 class="owner">{{ profile.user.username }} {% if online.id != profile.user.id %}<i class="far fa-comments" data-toggle="modal" data-target="#ModalMessage"> </i>{% endif %}</h5>
                     <h6 class="text-muted owner">Gender: {{ profile.gender }} </h6>
-                    <h6 class="text-muted">RATING : {{ rate }}</h6>
+                    <h6 class="text-muted">RATING : {{ rate }} &nbsp;{% if online.id != profile.user.id %}<div class="ui vertical animated button" tabindex="0" data-toggle="modal" data-target="#ModalRate">
+                        <div class="hidden content">Rate</div>
+                        <div class="visible content">
+                            <i class="star icon" style="color: gold;"></i>
+                        </div>
+                    </div> {% endif %}</h6>
+
                     <div class="card card-default">
                         <div class="card-body">
                             {% if user.is_teacher %}
@@ -47,8 +53,8 @@
                     </div>
                     <div>
                         <br>
-                         {% if user.is_teacher %}
-                        <h5 class="text-muted">Bio: {{ profile.bio }}</h5>
+                        {% if user.is_teacher %}
+                            <h5 class="text-muted">Bio: {{ profile.bio }}</h5>
                         {% endif %}
                     </div>
                 </div>
@@ -61,23 +67,56 @@
 
 
 
+    <div class="modal fade" id="ModalMessage" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Send {{ profile.user.username }} a message </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        {% bootstrap_form dm %}
+                        <button type="submit" class="ui primary button" >Send</button>
+                    </form>
 
-    {% if online.id != profile.user.id %}
-        <form method="post">
-            {% csrf_token %}
-            {% bootstrap_form dm %}
-            <button type="submit" >slide</button>
-        </form>
-    {% endif %}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ModalRate" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="{% url 'rate' user_id=profile.user.id  %}">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                        <input type="submit" value="Save" class="btn btn-primary">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-    {% if online.id != profile.user.id %}
-        <form method="post" action="{% url 'rate' user_id=profile.user.id  %}">
-            {% csrf_token %}
-            {% bootstrap_form form %}
-            <input type="submit" value="Rate" class="btn btn-primary">
-        </form>
-    {% endif %}
+
+
+
 
 
 {% endblock %}
