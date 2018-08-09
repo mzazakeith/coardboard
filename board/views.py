@@ -44,6 +44,7 @@ def new_service(request):
 
 @login_required
 def userprofile(request, user_id):
+    online = request.user
     dmform = Dmform()
     form = RateForm()
     users = User.objects.get(id=user_id)
@@ -64,7 +65,7 @@ def userprofile(request, user_id):
         profile = TeacherProfile.objects.get(user=users)
     elif users.is_student:
         profile = StudentProfile.objects.get(user=users)
-    return render(request, 'userprofile.html', {"user": users, "profile": profile, "dm": dmform, "form": form, "rate":rate, "online":request.user})
+    return render(request, 'userprofile.html', {"user": users, "profile": profile, "dm": dmform, "form": form, "rate":rate, "online":online})
 
 
 def forum(request):

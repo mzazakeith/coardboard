@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 {% block content %}
-    <div class="container-fluid">
+    <div class="container-fluid forum">
         <div class="row">
             <div class="col-md-12 text-center">
 
@@ -12,14 +12,14 @@
 
         </div>
         <div class="row">
+            <div class="col-md-4 question-board">
+                <h1 class="text-center">Questions Asked</h1>
+                {% for topic in topics %}
+                    <h4 data-toggle="modal" data-target="#{{topic.id}}" class="title-topic">Title : {{ topic.Title}}</h4>
+                {% endfor %}
+            </div>
             <div class="col-md-4">
 
-            </div>
-            <div class="col-md-4 question-board">
-                <h1 class="text-center">Questions</h1>
-                {% for topic in topics %}
-                    <h4 data-toggle="modal" data-target="#{{topic.id}}">{{ topic.Title }}</h4>
-                {% endfor %}
             </div>
             <div class="col-md-4">
 

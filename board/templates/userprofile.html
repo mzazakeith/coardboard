@@ -1,20 +1,74 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
+{% load static   %}
 {% block content %}
-    <h5>{{ profile.user.username }}</h5>
-    <p>{{ profile.gender }}</p>
-    <p>{{ profile.phone_number }}</p>
-    {% if user.is_teacher %}
-        {{ profile.bio }}
-        {{ profile.github_username }}
-    {% endif %}
+    <div class="container-fluid text-center usersprofile">
 
-    {{ rate }}
-    <form method="post">
-        {% csrf_token %}
-        {% bootstrap_form dm %}
-        <button type="submit" >slide</button>
-    </form>
+        <div class="row userprofile text-center">
+
+            <div class="col-md-5 call">
+                <div class="ppic-holder">
+                    <img class="profile-pic" src="{% static 'images/banner.jpg' %}" alt="">
+                    {#                    {{ profile.profile_pic.cdn_url }}#}
+                </div>
+                <div class="contact-holder text-center">
+                    <h5>{{ profile.user.username }}</h5>
+                    <h3 >{{ profile.phone_number }}</h3>
+                    <a href="#">
+                        <div class="another-holder">
+                            <div class="inner text-center">
+                                <span class="call-icon"><i class="fas fa-phone"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-1 center-col">
+
+            </div>
+            <div class="col-md-5 profile">
+                <div class="popic-holder">
+                    <img src="{% static 'images/banner.jpg' %}" alt="">
+                    {#                    {{ profile.profile_pic.cdn_url }}#}
+                    <h5 class="owner">{{ profile.user.username }} </h5>
+                    <h6 class="text-muted owner">Gender: {{ profile.gender }} </h6>
+                    <h6 class="text-muted">RATING : {{ rate }}</h6>
+                    <div class="card card-default">
+                        <div class="card-body">
+                            {% if user.is_teacher %}
+                                <p style="color: black">GITHUB</p>
+                                <i class="fab fa-github" style="color: black; font-size: 3vh;">&nbsp; {{ profile.github_username }}</i>
+                            {% endif %}
+                            <br>
+                            <p style="color: black">EMAIL</p>
+                            <i class="fas fa-envelope" style="color:black;font-size: 3vh; font-weight: lighter;">&nbsp;{{ profile.user.email }}</i>
+
+                        </div>
+                    </div>
+                    <div>
+                        <br>
+                         {% if user.is_teacher %}
+                        <h5 class="text-muted">Bio: {{ profile.bio }}</h5>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+    {% if online.id != profile.user.id %}
+        <form method="post">
+            {% csrf_token %}
+            {% bootstrap_form dm %}
+            <button type="submit" >slide</button>
+        </form>
+    {% endif %}
 
 
     {% if online.id != profile.user.id %}
@@ -24,5 +78,7 @@
             <input type="submit" value="Rate" class="btn btn-primary">
         </form>
     {% endif %}
+
+
 {% endblock %}
 
