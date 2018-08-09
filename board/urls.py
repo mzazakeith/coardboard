@@ -10,7 +10,8 @@ urlpatterns = [
     url(r'^forum$', views.forum, name='forum'),
     url(r'^comment/(?P<topic_id>\d+)', views.comment, name='comment'),
     url(r'^read/(?P<msg_id>\d+)', views.read, name='read'),
-    url(r'^rate/(?P<user_id>\d+)', views.rate, name='rate')
+    url(r'^rate/(?P<user_id>\d+)', views.rate, name='rate'),
+    url(r'^all-services/', views.get_services, name='all-services')
 ]
 
 

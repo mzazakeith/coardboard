@@ -127,3 +127,9 @@
 .sender{
      text-transform: capitalize;
 }
+
+.left-side{
+    background-color: #394263;
+    min-height: 100vh;
+    /*opacity:;*/
+}

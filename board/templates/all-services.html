@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+    <div class="container-fluid all-services">
+        <div class="row services">
+            {% for service in services %}
+                <div class="col-md-3">
+                    <div class="ui card">
+                        <div class="content">
+                            <div class="header"><a href="{% url 'profile' user_id=service.user.id %}" style="color: gray;">{{ service.Title }}</a></div>
+                            <div class="meta">Offered by:<a href="{% url 'profile' user_id=service.user.id %}">{{ service.user }}</a> | {{ service.type }}</div>
+                            <div class="description">
+                                {{ service.description }}
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <i class="money bill alternate outline icon"></i>
+                            {{ service.rate_per_hour }} per hour
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
