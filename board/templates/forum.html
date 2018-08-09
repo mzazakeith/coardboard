@@ -1,16 +1,32 @@
-{% extends 'index/index_base.html' %}
+{% extends 'base.html' %}
 {% load bootstrap4 %}
 {% block content %}
-    <div class="col-md-4">
-        <form method="post">
-            {% csrf_token %}
-            {% bootstrap_form form %}
-        </form>
-    </div>
-    {% for topic in topics %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center">
 
-        <p data-toggle="modal" data-target="#{{topic.id}}">{{ topic.Title }}</p>
-    {% endfor %}
+                <button class="positive ui button"  data-toggle="modal" data-target="#example">Post a question</button>
+
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4 question-board">
+                <h1 class="text-center">Questions</h1>
+                {% for topic in topics %}
+                    <h4 data-toggle="modal" data-target="#{{topic.id}}">{{ topic.Title }}</h4>
+                {% endfor %}
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>
+
+    </div>
 
 
     {% for topic in topics %}
@@ -25,7 +41,7 @@
                     </div>
                     <div class="modal-body">
                         <h3>{{ topic.Title }}</h3>
-                        <form  action="{%url 'comment' topic_id=topic.id %}" method="post" enctype="multipart/form-data">
+                        <form  action="{%url 'comment' topic_id=topic.id %}" method="post" enctype="multipart/form-data" class="ui reply form">
                             {%csrf_token%}
                             {% bootstrap_form comment%}
                         </form>
@@ -46,5 +62,88 @@
 
     {% endfor %}
 
+    <div class="modal fade" id="example" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" class="ui reply form">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 {% endblock %}
+{##}
+{#<div class="ui comments">#}
+{#  <h3 class="ui dividing header">Comments</h3>#}
+{#  <div class="comment">#}
+{#    <a class="avatar">#}
+{#      <img src="/images/avatar/small/matt.jpg">#}
+{#    </a>#}
+{#    <div class="content">#}
+{#      <a class="author">Matt</a>#}
+{#      <div class="metadata">#}
+{#        <span class="date">Today at 5:42PM</span>#}
+{#      </div>#}
+{#      <div class="text">#}
+{#        How artistic!#}
+{#      </div>#}
+{#      <div class="actions">#}
+{#        <a class="reply">Reply</a>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+{#  <div class="comment">#}
+{#    <a class="avatar">#}
+{#      <img src="/images/avatar/small/elliot.jpg">#}
+{#    </a>#}
+{#    <div class="content">#}
+{#      <a class="author">Elliot Fu</a>#}
+{#      <div class="metadata">#}
+{#        <span class="date">Yesterday at 12:30AM</span>#}
+{#      </div>#}
+{#      <div class="text">#}
+{#        <p>This has been very useful for my research. Thanks as well!</p>#}
+{#      </div>#}
+{#      <div class="actions">#}
+{#        <a class="reply">Reply</a>#}
+{#      </div>#}
+{#    </div>#}
+{#    <div class="comments">#}
+{#      <div class="comment">#}
+{#        <a class="avatar">#}
+{#          <img src="/images/avatar/small/jenny.jpg">#}
+{#        </a>#}
+{#        <div class="content">#}
+{#          <a class="author">Jenny Hess</a>#}
+{#          <div class="metadata">#}
+{#            <span class="date">Just now</span>#}
+{#          </div>#}
+{#          <div class="text">#}
+{#            Elliot you are always so right :)#}
+{#          </div>#}
+{#          <div class="actions">#}
+{#            <a class="reply">Reply</a>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+{##}
+{##}
+{#</div>#}
+
+
+
