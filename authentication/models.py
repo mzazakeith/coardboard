@@ -1,6 +1,9 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+
+from pyuploadcare.dj.models import ImageField
+
 Gender_Choices = (
     ('F', 'female'),
     ('M', 'male'),
@@ -21,7 +24,7 @@ class Messages(models.Model):
 
 
 class TeacherProfile(models.Model):
-    # profile_pic = ImageField()
+    profile_pic = ImageField()
     bio = models.TextField()
     gender = models.CharField(max_length=30, choices=Gender_Choices, default='None', blank=True)
     phone_number = models.PositiveIntegerField()
@@ -30,7 +33,7 @@ class TeacherProfile(models.Model):
 
 
 class StudentProfile(models.Model):
-    # profile_pic = ImageField()
+    profile_pic = ImageField()
     gender = models.CharField(max_length=30, choices=Gender_Choices, default='None', blank=True)
     phone_number = models.PositiveIntegerField()
     user = models.OneToOneField(User)

@@ -84,6 +84,13 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
@@ -121,4 +128,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = "authentication.User"
+
+UPLOADCARE = {
+    'pub_key': '45b9d1d695652a0bb169',
+    'secret': 'e2d8fb3eb2efde281794',
+}
+
 
