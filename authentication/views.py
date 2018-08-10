@@ -1,14 +1,17 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth import get_user_model
-
+#
 from authentication.forms import TeacherSignupForm, StudentSignupForm, CreateTeacherProfileForm, \
     CreateStudentProfileForm
+from authentication.forms import TeacherSignupForm, StudentSignupForm
 from authentication.models import TeacherProfile
 
 User = get_user_model()
 
 
+#
+#
 def teacher_signup(request):
     if request.method == 'POST':
         form = TeacherSignupForm(request.POST)
@@ -48,7 +51,7 @@ def create_teacher_profile(request):
             profile = form.save(commit=False)
             profile.user = current_user
             profile.save()
-            return redirect('/')
+            return redirect('/home')
     else:
         form = CreateTeacherProfileForm()
     return render(request, 'profile/teacher_profile.html', {"form": form, "user": current_user})
@@ -63,9 +66,7 @@ def create_student_profile(request):
             profile = form.save(commit=False)
             profile.user = current_user
             profile.save()
-            return redirect('/')
+            return redirect('/home')
     else:
         form = CreateStudentProfileForm()
     return render(request, 'profile/student_profile.html', {"form": form, "user": current_user})
-
-
